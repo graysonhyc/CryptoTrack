@@ -11,7 +11,7 @@ import SwiftUI
 struct BraveWalletHackApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

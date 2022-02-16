@@ -13,10 +13,11 @@
 		5663D5EB27BDA8DE00F8F372 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5EA27BDA8DE00F8F372 /* Tests_macOSLaunchTests.swift */; };
 		5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */; };
 		5663D5ED27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */; };
-		5663D5EE27BDA8DE00F8F372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* ContentView.swift */; };
-		5663D5EF27BDA8DE00F8F372 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* ContentView.swift */; };
+		5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* RootView.swift */; };
+		5663D5EF27BDA8DE00F8F372 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* RootView.swift */; };
 		5663D5F027BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
 		5663D5F127BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
+		5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5663D60127BDA98C00F8F372 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraveWalletHackApp.swift; sourceTree = "<group>"; };
-		5663D5C527BDA8DC00F8F372 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5663D5C527BDA8DC00F8F372 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5663D5C627BDA8DE00F8F372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5663D5CB27BDA8DE00F8F372 /* BraveWalletHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BraveWalletHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663D5D127BDA8DE00F8F372 /* BraveWalletHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BraveWalletHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +88,7 @@
 		5663D5BE27BDA8DB00F8F372 = {
 			isa = PBXGroup;
 			children = (
-				5663D5C327BDA8DC00F8F372 /* Shared */,
+				5663D5C327BDA8DC00F8F372 /* FeatureDashboard */,
 				5663D5D227BDA8DE00F8F372 /* macOS */,
 				5663D5DB27BDA8DE00F8F372 /* Tests iOS */,
 				5663D5E727BDA8DE00F8F372 /* Tests macOS */,
@@ -94,14 +96,17 @@
 			);
 			sourceTree = "<group>";
 		};
-		5663D5C327BDA8DC00F8F372 /* Shared */ = {
+		5663D5C327BDA8DC00F8F372 /* FeatureDashboard */ = {
 			isa = PBXGroup;
 			children = (
 				5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */,
-				5663D5C527BDA8DC00F8F372 /* ContentView.swift */,
+				5663D5C527BDA8DC00F8F372 /* RootView.swift */,
+				5663D60527BDA9BE00F8F372 /* Data */,
+				5663D60427BDA9B800F8F372 /* Domain */,
+				5663D60327BDA9B200F8F372 /* Presentation */,
 				5663D5C627BDA8DE00F8F372 /* Assets.xcassets */,
 			);
-			path = Shared;
+			path = FeatureDashboard;
 			sourceTree = "<group>";
 		};
 		5663D5CC27BDA8DE00F8F372 /* Products */ = {
@@ -141,6 +146,27 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		5663D60327BDA9B200F8F372 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5663D60427BDA9B800F8F372 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		5663D60527BDA9BE00F8F372 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +183,9 @@
 			dependencies = (
 			);
 			name = "BraveWalletHack (iOS)";
+			packageProductDependencies = (
+				5663D60127BDA98C00F8F372 /* ComposableArchitecture */,
+			);
 			productName = "BraveWalletHack (iOS)";
 			productReference = 5663D5CB27BDA8DE00F8F372 /* BraveWalletHack.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +278,9 @@
 				Base,
 			);
 			mainGroup = 5663D5BE27BDA8DB00F8F372;
+			packageReferences = (
+				5663D60027BDA98C00F8F372 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 5663D5CC27BDA8DE00F8F372 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,7 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5663D5EE27BDA8DE00F8F372 /* ContentView.swift in Sources */,
+				5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */,
 				5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5663D5EF27BDA8DE00F8F372 /* ContentView.swift in Sources */,
+				5663D5EF27BDA8DE00F8F372 /* RootView.swift in Sources */,
 				5663D5ED27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,6 +501,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -499,6 +532,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
@@ -701,6 +735,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5663D60027BDA98C00F8F372 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5663D60127BDA98C00F8F372 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5663D60027BDA98C00F8F372 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5663D5BF27BDA8DB00F8F372 /* Project object */;
 }
