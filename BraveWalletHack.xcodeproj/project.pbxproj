@@ -18,6 +18,16 @@
 		5663D5F027BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
 		5663D5F127BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
 		5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5663D60127BDA98C00F8F372 /* ComposableArchitecture */; };
+		5663D60727BDAA9A00F8F372 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D60627BDAA9A00F8F372 /* DashboardView.swift */; };
+		5663D60A27BDAAA700F8F372 /* DashboardReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D60927BDAAA700F8F372 /* DashboardReducer.swift */; };
+		5663D60C27BDAB8100F8F372 /* LocalizationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D60B27BDAB8100F8F372 /* LocalizationConstants.swift */; };
+		5663D60E27BDAEB000F8F372 /* CryptoAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D60D27BDAEB000F8F372 /* CryptoAsset.swift */; };
+		5663D61127BDB75E00F8F372 /* AssetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D61027BDB75E00F8F372 /* AssetRow.swift */; };
+		5663D61427BDBAB700F8F372 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5663D61327BDBAB700F8F372 /* Alamofire */; };
+		5663D61727BDBDE500F8F372 /* CryptoAssetFetchingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D61627BDBDE500F8F372 /* CryptoAssetFetchingClient.swift */; };
+		5663D61B27BDBE3D00F8F372 /* CryptoAssetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D61A27BDBE3D00F8F372 /* CryptoAssetRepository.swift */; };
+		5663D62027BDBE5F00F8F372 /* CryptoAssetRepositoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D61F27BDBE5F00F8F372 /* CryptoAssetRepositoryAPI.swift */; };
+		56A874FF27C1249900C0F263 /* CryptoAssetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +60,15 @@
 		5663D5E427BDA8DE00F8F372 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663D5E827BDA8DE00F8F372 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5663D5EA27BDA8DE00F8F372 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		5663D60627BDAA9A00F8F372 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		5663D60927BDAAA700F8F372 /* DashboardReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardReducer.swift; sourceTree = "<group>"; };
+		5663D60B27BDAB8100F8F372 /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
+		5663D60D27BDAEB000F8F372 /* CryptoAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAsset.swift; sourceTree = "<group>"; };
+		5663D61027BDB75E00F8F372 /* AssetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetRow.swift; sourceTree = "<group>"; };
+		5663D61627BDBDE500F8F372 /* CryptoAssetFetchingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetFetchingClient.swift; sourceTree = "<group>"; };
+		5663D61A27BDBE3D00F8F372 /* CryptoAssetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetRepository.swift; sourceTree = "<group>"; };
+		5663D61F27BDBE5F00F8F372 /* CryptoAssetRepositoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetRepositoryAPI.swift; sourceTree = "<group>"; };
+		56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */,
+				5663D61427BDBAB700F8F372 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +169,9 @@
 		5663D60327BDA9B200F8F372 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5663D61527BDBD6100F8F372 /* AssetList */,
+				5663D60F27BDB74D00F8F372 /* Dashboard */,
+				5663D60B27BDAB8100F8F372 /* LocalizationConstants.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -156,6 +179,8 @@
 		5663D60427BDA9B800F8F372 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5663D61D27BDBE4D00F8F372 /* Models */,
+				5663D61C27BDBE4500F8F372 /* Repositories */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -163,8 +188,68 @@
 		5663D60527BDA9BE00F8F372 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5663D62127BDBEAC00F8F372 /* Models */,
+				5663D61927BDBE3000F8F372 /* Repositories */,
+				5663D61827BDBE2800F8F372 /* Client */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		5663D60F27BDB74D00F8F372 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				5663D60627BDAA9A00F8F372 /* DashboardView.swift */,
+				5663D60927BDAAA700F8F372 /* DashboardReducer.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		5663D61527BDBD6100F8F372 /* AssetList */ = {
+			isa = PBXGroup;
+			children = (
+				5663D61027BDB75E00F8F372 /* AssetRow.swift */,
+			);
+			path = AssetList;
+			sourceTree = "<group>";
+		};
+		5663D61827BDBE2800F8F372 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				5663D61627BDBDE500F8F372 /* CryptoAssetFetchingClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		5663D61927BDBE3000F8F372 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5663D61A27BDBE3D00F8F372 /* CryptoAssetRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5663D61C27BDBE4500F8F372 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5663D61F27BDBE5F00F8F372 /* CryptoAssetRepositoryAPI.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5663D61D27BDBE4D00F8F372 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5663D60D27BDAEB000F8F372 /* CryptoAsset.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5663D62127BDBEAC00F8F372 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +270,7 @@
 			name = "BraveWalletHack (iOS)";
 			packageProductDependencies = (
 				5663D60127BDA98C00F8F372 /* ComposableArchitecture */,
+				5663D61327BDBAB700F8F372 /* Alamofire */,
 			);
 			productName = "BraveWalletHack (iOS)";
 			productReference = 5663D5CB27BDA8DE00F8F372 /* BraveWalletHack.app */;
@@ -280,6 +366,7 @@
 			mainGroup = 5663D5BE27BDA8DB00F8F372;
 			packageReferences = (
 				5663D60027BDA98C00F8F372 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				5663D61227BDBAB700F8F372 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 5663D5CC27BDA8DE00F8F372 /* Products */;
 			projectDirPath = "";
@@ -331,8 +418,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56A874FF27C1249900C0F263 /* CryptoAssetResponse.swift in Sources */,
+				5663D62027BDBE5F00F8F372 /* CryptoAssetRepositoryAPI.swift in Sources */,
 				5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */,
+				5663D60727BDAA9A00F8F372 /* DashboardView.swift in Sources */,
+				5663D61727BDBDE500F8F372 /* CryptoAssetFetchingClient.swift in Sources */,
+				5663D61127BDB75E00F8F372 /* AssetRow.swift in Sources */,
+				5663D60C27BDAB8100F8F372 /* LocalizationConstants.swift in Sources */,
+				5663D60E27BDAEB000F8F372 /* CryptoAsset.swift in Sources */,
 				5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */,
+				5663D61B27BDBE3D00F8F372 /* CryptoAssetRepository.swift in Sources */,
+				5663D60A27BDAAA700F8F372 /* DashboardReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +841,14 @@
 				minimumVersion = 0.9.0;
 			};
 		};
+		5663D61227BDBAB700F8F372 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -752,6 +856,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5663D60027BDA98C00F8F372 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
+		};
+		5663D61327BDBAB700F8F372 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5663D61227BDBAB700F8F372 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
