@@ -49,6 +49,7 @@ struct DashboardView: View {
                 .navigationTitle(LocalizedString.navigationTitle)
                 .navigationBarTitleDisplayMode(.inline)
                 .onAppear { viewStore.send(.onAppear) }
+                .onDisappear { viewStore.send(.onDisappear) }
             }
         }
     }

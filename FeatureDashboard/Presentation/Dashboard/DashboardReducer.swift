@@ -11,6 +11,7 @@ import ComposableArchitecture
 
 enum DashboardAction: Equatable, BindableAction {
     case onAppear
+    case onDisappear
     case fetchCryptoAsset
     case didFetchCryptoAsset(Result<[CryptoAsset], CryptoAssetRepositoryError>)
     case fabButtonTapped
@@ -69,6 +70,9 @@ let dashboardReducer = Reducer<
             .receive(on: environment.mainQueue)
             .eraseToEffect()
         )
+
+    case .onDisappear:
+        return .cancel(id: DashboardCancellations.RefreshTimerId())
 
     case .fetchCryptoAsset:
         return environment
