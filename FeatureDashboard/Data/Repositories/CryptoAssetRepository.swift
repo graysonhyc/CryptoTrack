@@ -26,18 +26,29 @@ final class CryptoAssetRepository: CryptoAssetRepositoryAPI {
             client.fetchAssets(),
             client.fetchAssetPrice(name: "bitcoin", currency: "usd")
         )
-        .map { (assets, priceResponse) in
-            assets.map { asset in
+        .map { [printAssets] (assets, priceResponse) in
+            let assets = assets.map { asset -> CryptoAsset in
                 if asset.symbol != "btc" {
                     let btcExchangeRate = Double(asset.currentPrice / priceResponse.price)
                     return asset.toDomain(btcExchangeRate: btcExchangeRate)
                 }
                 return asset.toDomain(btcExchangeRate: nil)
             }
+            printAssets(assets)
+            return assets
         }
         .mapError { error in
             .failedToFetch(error.localizedDescription)
         }
         .eraseToAnyPublisher()
+    }
+}
+
+private extension CryptoAssetRepository {
+
+    func printAssets(_ assets: [CryptoAsset])  {
+        assets.forEach {
+            print("\($0.name) - \($0.price) - \($0.btcExchangeRate ?? 1.0)")
+        }
     }
 }
