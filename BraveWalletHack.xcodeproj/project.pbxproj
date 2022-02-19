@@ -30,6 +30,7 @@
 		56A874FF27C1249900C0F263 /* CryptoAssetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */; };
 		56A8750127C1300300C0F263 /* ROIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750027C1300300C0F263 /* ROIResponse.swift */; };
 		56A8750327C1599E00C0F263 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750227C1599E00C0F263 /* APIConstants.swift */; };
+		56A8750527C163A000C0F263 /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750427C163A000C0F263 /* PriceResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetResponse.swift; sourceTree = "<group>"; };
 		56A8750027C1300300C0F263 /* ROIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIResponse.swift; sourceTree = "<group>"; };
 		56A8750227C1599E00C0F263 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		56A8750427C163A000C0F263 /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +256,7 @@
 			children = (
 				56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */,
 				56A8750027C1300300C0F263 /* ROIResponse.swift */,
+				56A8750427C163A000C0F263 /* PriceResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 			files = (
 				56A874FF27C1249900C0F263 /* CryptoAssetResponse.swift in Sources */,
 				5663D62027BDBE5F00F8F372 /* CryptoAssetRepositoryAPI.swift in Sources */,
+				56A8750527C163A000C0F263 /* PriceResponse.swift in Sources */,
 				56A8750327C1599E00C0F263 /* APIConstants.swift in Sources */,
 				5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */,
 				5663D60727BDAA9A00F8F372 /* DashboardView.swift in Sources */,

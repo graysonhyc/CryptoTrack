@@ -41,7 +41,7 @@ struct CryptoAssetResponse: Decodable {
     var circulatingSupply: Float?
     var priceChangePercentage24h: Float?
     var ath: Float?
-    var symbol: String?
+    var symbol: String
     var atlChangePercentage: Float?
     var marketCapRank: Int?
     var id: String?
@@ -54,14 +54,14 @@ struct CryptoAssetResponse: Decodable {
     var fullyDilutedValuation: Int?
     var marketCapChangePercentage24h: Float?
     var lastUpdated: String?
-    var currentPrice: Float?
+    var currentPrice: Float
     var atl: Float?
     var high24h: Float?
     var maxSupply: Float?
     var atlDate: String?
     var athChangePercentage: Float?
     var image: String?
-    var name: String?
+    var name: String
     var roi: ROIResponse?
     var totalSupply: Float?
 
@@ -70,7 +70,7 @@ struct CryptoAssetResponse: Decodable {
         circulatingSupply = try container.decodeIfPresent(Float.self, forKey: .circulatingSupply)
         priceChangePercentage24h = try container.decodeIfPresent(Float.self, forKey: .priceChangePercentage24h)
         ath = try container.decodeIfPresent(Float.self, forKey: .ath)
-        symbol = try container.decodeIfPresent(String.self, forKey: .symbol)
+        symbol = try container.decode(String.self, forKey: .symbol)
         atlChangePercentage = try container.decodeIfPresent(Float.self, forKey: .atlChangePercentage)
         marketCapRank = try container.decodeIfPresent(Int.self, forKey: .marketCapRank)
         id = try container.decodeIfPresent(String.self, forKey: .id)
@@ -83,25 +83,25 @@ struct CryptoAssetResponse: Decodable {
         fullyDilutedValuation = try container.decodeIfPresent(Int.self, forKey: .fullyDilutedValuation)
         marketCapChangePercentage24h = try container.decodeIfPresent(Float.self, forKey: .marketCapChangePercentage24h)
         lastUpdated = try container.decodeIfPresent(String.self, forKey: .lastUpdated)
-        currentPrice = try container.decodeIfPresent(Float.self, forKey: .currentPrice)
+        currentPrice = try container.decode(Float.self, forKey: .currentPrice)
         atl = try container.decodeIfPresent(Float.self, forKey: .atl)
         high24h = try container.decodeIfPresent(Float.self, forKey: .high24h)
         maxSupply = try container.decodeIfPresent(Float.self, forKey: .maxSupply)
         atlDate = try container.decodeIfPresent(String.self, forKey: .atlDate)
         athChangePercentage = try container.decodeIfPresent(Float.self, forKey: .athChangePercentage)
         image = try container.decodeIfPresent(String.self, forKey: .image)
-        name = try container.decodeIfPresent(String.self, forKey: .name)
+        name = try container.decode(String.self, forKey: .name)
         roi = try container.decodeIfPresent(ROIResponse.self, forKey: .roi)
         totalSupply = try container.decodeIfPresent(Float.self, forKey: .totalSupply)
     }
 
-    func toDomain() -> CryptoAsset {
+    func toDomain(btcExchangeRate: Double?) -> CryptoAsset {
         CryptoAsset(
             imageURL: URL(string: image ?? ""),
-            name: name ?? "",
-            symbol: symbol ?? "",
-            price: Double(currentPrice ?? 0.0),
-            btcExchangeRate: 0.0
+            name: name,
+            symbol: symbol,
+            price: Double(currentPrice),
+            btcExchangeRate: btcExchangeRate
         )
     }
 }

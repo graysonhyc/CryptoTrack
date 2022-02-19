@@ -7,7 +7,7 @@
 
 import Combine
 
-enum CryptoAssetRepositoryError: Error {
+enum CryptoAssetRepositoryError: Equatable, Error {
     case failedToFetch(String)
 }
 

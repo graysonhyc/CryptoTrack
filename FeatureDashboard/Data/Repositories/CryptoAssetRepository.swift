@@ -22,14 +22,22 @@ final class CryptoAssetRepository: CryptoAssetRepositoryAPI {
     // MARK: - API
 
     func fetchAsset() -> AnyPublisher<[CryptoAsset], CryptoAssetRepositoryError> {
-        client
-            .fetchAssets()
-            .map { assets in
-                assets.map { $0.toDomain() }
+        Publishers.Zip(
+            client.fetchAssets(),
+            client.fetchAssetPrice(name: "bitcoin", currency: "usd")
+        )
+        .map { (assets, priceResponse) in
+            assets.map { asset in
+                if asset.name == "bitcoin" {
+                    let btcExchangeRate = Double(asset.currentPrice / priceResponse.price)
+                    return asset.toDomain(btcExchangeRate: btcExchangeRate)
+                }
+                return asset.toDomain(btcExchangeRate: nil)
             }
-            .mapError { error in
-                .failedToFetch(error.localizedDescription)
-            }
-            .eraseToAnyPublisher()
+        }
+        .mapError { error in
+            .failedToFetch(error.localizedDescription)
+        }
+        .eraseToAnyPublisher()
     }
 }

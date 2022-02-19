@@ -36,10 +36,12 @@ struct AssetRow: View {
                     .font(.system(size: 13.0))
                     .fontWeight(.regular)
                     .opacity(0.8)
-                Text("\(asset.btcExchangeRate) BTC")
-                    .font(.system(size: 13.0))
-                    .fontWeight(.regular)
-                    .opacity(0.6)
+                if let rate = asset.btcExchangeRate {
+                    Text("\(rate) BTC")
+                        .font(.system(size: 13.0))
+                        .fontWeight(.regular)
+                        .opacity(0.6)
+                }
             }
         }
         .padding(10)
