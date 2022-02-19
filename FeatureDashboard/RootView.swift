@@ -17,7 +17,7 @@ struct RootView: View {
         }) {
             Image("brave_logo")
                 .resizable()
-                .frame(width: 64, height: 64)
+                .frame(width: 128, height: 128)
         }
         .sheet(isPresented: $shouldOpenDashboard) {
             DashboardView(
