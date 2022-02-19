@@ -39,7 +39,7 @@ struct CryptoAssetResponse: Decodable {
     }
 
     var circulatingSupply: Float?
-    var priceChangePercentage24h: Float?
+    var priceChangePercentage24h: Float
     var ath: Float?
     var symbol: String
     var atlChangePercentage: Float?
@@ -68,7 +68,7 @@ struct CryptoAssetResponse: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         circulatingSupply = try container.decodeIfPresent(Float.self, forKey: .circulatingSupply)
-        priceChangePercentage24h = try container.decodeIfPresent(Float.self, forKey: .priceChangePercentage24h)
+        priceChangePercentage24h = try container.decode(Float.self, forKey: .priceChangePercentage24h)
         ath = try container.decodeIfPresent(Float.self, forKey: .ath)
         symbol = try container.decode(String.self, forKey: .symbol)
         atlChangePercentage = try container.decodeIfPresent(Float.self, forKey: .atlChangePercentage)
@@ -101,6 +101,7 @@ struct CryptoAssetResponse: Decodable {
             name: name,
             symbol: symbol,
             price: Double(currentPrice),
+            percentageChangeByDay: Double(priceChangePercentage24h),
             btcExchangeRate: btcExchangeRate
         )
     }

@@ -36,13 +36,22 @@ struct AssetRow: View {
                     .font(.system(size: 13.0))
                     .fontWeight(.regular)
                     .opacity(0.8)
+                if asset.percentageChangeByDay >= 0 {
+                    Text("+\(String(format: "%.2f", asset.percentageChangeByDay))%")
+                        .foregroundColor(.green)
+                        .font(.system(size: 13.0))
+                        .fontWeight(.regular)
+                } else {
+                    Text("\(String(format: "%.2f", asset.percentageChangeByDay))%")
+                        .foregroundColor(.red)
+                        .font(.system(size: 13.0))
+                        .fontWeight(.regular)
+                }
                 if let rate = asset.btcExchangeRate {
                     Text("\(rate) BTC")
                         .font(.system(size: 13.0))
                         .fontWeight(.regular)
                         .opacity(0.6)
-                } else {
-                    Text("")
                 }
             }
         }
@@ -58,6 +67,7 @@ struct AssetRow_Previews: PreviewProvider {
                 name: "Bitcoin",
                 symbol: "BTC",
                 price: 52255.45,
+                percentageChangeByDay: 0.59,
                 btcExchangeRate: 0.235
             )
         )

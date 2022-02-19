@@ -13,6 +13,7 @@ enum DashboardAction: Equatable, BindableAction {
     case onAppear
     case fetchCryptoAsset
     case didFetchCryptoAsset(Result<[CryptoAsset], CryptoAssetRepositoryError>)
+    case fabButtonTapped
     case binding(BindingAction<DashboardState>)
 }
 
@@ -92,6 +93,10 @@ let dashboardReducer = Reducer<
         case .failure(let error):
             break
         }
+        return .none
+
+    case .fabButtonTapped:
+        print("fabbedButtonTapped - perform action")
         return .none
 
     case .binding(\.$searchText):

@@ -12,5 +12,6 @@ struct CryptoAsset: Equatable {
     let name: String
     let symbol: String
     let price: Double
+    let percentageChangeByDay: Double
     let btcExchangeRate: Double?
 }

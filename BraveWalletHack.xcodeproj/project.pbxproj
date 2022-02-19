@@ -31,6 +31,7 @@
 		56A8750127C1300300C0F263 /* ROIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750027C1300300C0F263 /* ROIResponse.swift */; };
 		56A8750327C1599E00C0F263 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750227C1599E00C0F263 /* APIConstants.swift */; };
 		56A8750527C163A000C0F263 /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750427C163A000C0F263 /* PriceResponse.swift */; };
+		56A8750727C170F200C0F263 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750627C170F200C0F263 /* Icons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		56A8750027C1300300C0F263 /* ROIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ROIResponse.swift; sourceTree = "<group>"; };
 		56A8750227C1599E00C0F263 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		56A8750427C163A000C0F263 /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
+		56A8750627C170F200C0F263 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 			children = (
 				5663D60627BDAA9A00F8F372 /* DashboardView.swift */,
 				5663D60927BDAAA700F8F372 /* DashboardReducer.swift */,
+				56A8750627C170F200C0F263 /* Icons.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				5663D60727BDAA9A00F8F372 /* DashboardView.swift in Sources */,
 				5663D61727BDBDE500F8F372 /* CryptoAssetFetchingClient.swift in Sources */,
 				56A8750127C1300300C0F263 /* ROIResponse.swift in Sources */,
+				56A8750727C170F200C0F263 /* Icons.swift in Sources */,
 				5663D61127BDB75E00F8F372 /* AssetRow.swift in Sources */,
 				5663D60C27BDAB8100F8F372 /* LocalizationConstants.swift in Sources */,
 				5663D60E27BDAEB000F8F372 /* CryptoAsset.swift in Sources */,
