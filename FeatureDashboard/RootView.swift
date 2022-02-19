@@ -9,8 +9,37 @@ import SwiftUI
 
 struct RootView: View {
     var body: some View {
-        Text("Tap to Open Crypto Dashboard")
-            .padding()
+        DashboardView(
+            store: .init(
+                initialState: .init(
+                    cryptoAssets: [
+                        CryptoAsset(
+                            imageURL: nil,
+                            name: "Bitcoin",
+                            symbol: "BTC",
+                            price: 52255.45,
+                            btcExchangeRate: 0.235
+                        ),
+                        CryptoAsset(
+                            imageURL: nil,
+                            name: "Bitcoin",
+                            symbol: "BTC",
+                            price: 52255.45,
+                            btcExchangeRate: 0.235
+                        ),
+                        CryptoAsset(
+                            imageURL: nil,
+                            name: "Bitcoin",
+                            symbol: "BTC",
+                            price: 52255.45,
+                            btcExchangeRate: 0.235
+                        )
+                    ]
+                ),
+                reducer: dashboardReducer,
+                environment: .init(mainQueue: .main)
+            )
+        )
     }
 }
 
