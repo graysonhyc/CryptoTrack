@@ -41,6 +41,8 @@ struct AssetRow: View {
                         .font(.system(size: 13.0))
                         .fontWeight(.regular)
                         .opacity(0.6)
+                } else {
+                    Text("")
                 }
             }
         }
