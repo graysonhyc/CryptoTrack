@@ -23,34 +23,25 @@ struct DashboardView: View {
             NavigationView {
                 VStack {
                     List {
-                        ForEach(viewStore.filteredCryptoAssets, id: \.symbol) {
-                            AssetRow(asset: $0)
+                        Section(LocalizedString.AssetList.title) {
+                            ForEach(viewStore.filteredCryptoAssets, id: \.symbol) {
+                                AssetRow(asset: $0)
+                            }
                         }
                     }
-                    .searchable(text: viewStore.binding(\.$searchText))
+                    .searchable(
+                        text: viewStore.binding(\.$searchText),
+                        placement: .navigationBarDrawer(displayMode: .always)
+                    )
+                    .refreshable { viewStore.send(.fetchCryptoAsset) }
                     .listStyle(.insetGrouped)
                     .listRowSeparator(.visible)
                 }
                 .navigationTitle(LocalizedString.navigationTitle)
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: searchButton)
-                .onAppear {
-                    viewStore.send(.onAppear)
-                }
+                .onAppear { viewStore.send(.onAppear) }
             }
         }
-    }
-
-    private var searchButton: some View {
-        Button(
-            action: {
-                // TODO: add view action
-            },
-            label: {
-                Image(systemName: "magnifyingglass")
-                    .frame(width: 24, height: 24)
-            }
-        )
     }
 }
 
