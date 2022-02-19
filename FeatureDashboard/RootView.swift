@@ -12,8 +12,12 @@ struct RootView: View {
     @State private var shouldOpenDashboard: Bool = false
 
     var body: some View {
-        Button("Tap to open dashboard") {
+        Button(action: {
             shouldOpenDashboard.toggle()
+        }) {
+            Image("brave_logo")
+                .resizable()
+                .frame(width: 64, height: 64)
         }
         .sheet(isPresented: $shouldOpenDashboard) {
             DashboardView(
