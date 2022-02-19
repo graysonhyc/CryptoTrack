@@ -21,17 +21,23 @@ struct DashboardView: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             NavigationView {
-                List {
-                    ForEach(viewStore.filteredCryptoAssets, id: \.symbol) {
-                        AssetRow(asset: $0)
+                VStack {
+                    List {
+                        ForEach(viewStore.filteredCryptoAssets, id: \.symbol) {
+                            AssetRow(asset: $0)
+                        }
                     }
+                    .searchable(text: viewStore.binding(\.$searchText))
+                    .listStyle(.insetGrouped)
+                    .listRowSeparator(.visible)
                 }
-                .searchable(text: viewStore.binding(\.$searchText))
-                .listStyle(.insetGrouped)
-                .listRowSeparator(.visible)
+                .navigationTitle(LocalizedString.navigationTitle)
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing: searchButton)
+                .onAppear {
+                    viewStore.send(.onAppear)
+                }
             }
-            .navigationTitle(LocalizedString.navigationTitle)
-            .navigationBarItems(trailing: searchButton)
         }
     }
 
@@ -52,33 +58,12 @@ struct DashboardView_Previews: PreviewProvider {
     static var previews: some View {
         DashboardView(
             store: .init(
-                initialState: .init(
-                    cryptoAssets: [
-                        CryptoAsset(
-                            imageURL: nil,
-                            name: "Bitcoin",
-                            symbol: "BTC",
-                            price: 52255.45,
-                            btcExchangeRate: 0.235
-                        ),
-                        CryptoAsset(
-                            imageURL: nil,
-                            name: "Bitcoin",
-                            symbol: "BTC",
-                            price: 52255.45,
-                            btcExchangeRate: 0.235
-                        ),
-                        CryptoAsset(
-                            imageURL: nil,
-                            name: "Bitcoin",
-                            symbol: "BTC",
-                            price: 52255.45,
-                            btcExchangeRate: 0.235
-                        )
-                    ]
-                ),
+                initialState: .init(),
                 reducer: dashboardReducer,
-                environment: .init(mainQueue: .main)
+                environment: .init(
+                    mainQueue: .main,
+                    assetRepository: CryptoAssetRepository()
+                )
             )
         )
     }

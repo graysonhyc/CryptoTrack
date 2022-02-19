@@ -17,8 +17,7 @@ struct AssetRow: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 15.0) {
-            Image(systemName: "bitcoinsign.circle.fill")
-                .resizable()
+            AsyncImage(url: asset.imageURL)
                 .frame(width: 48, height: 48)
             VStack(alignment: .leading, spacing: 2.0) {
                 Text(asset.name)
@@ -38,7 +37,7 @@ struct AssetRow: View {
                     .fontWeight(.regular)
             }
         }
-        .padding(15)
+        .padding(10)
     }
 }
 

@@ -8,38 +8,25 @@
 import SwiftUI
 
 struct RootView: View {
+
+    @State private var shouldOpenDashboard: Bool = false
+
     var body: some View {
-        DashboardView(
-            store: .init(
-                initialState: .init(
-                    cryptoAssets: [
-                        CryptoAsset(
-                            imageURL: nil,
-                            name: "Bitcoin",
-                            symbol: "BTC",
-                            price: 52255.45,
-                            btcExchangeRate: 0.235
-                        ),
-                        CryptoAsset(
-                            imageURL: nil,
-                            name: "Bitcoin",
-                            symbol: "BTC",
-                            price: 52255.45,
-                            btcExchangeRate: 0.235
-                        ),
-                        CryptoAsset(
-                            imageURL: nil,
-                            name: "Bitcoin",
-                            symbol: "BTC",
-                            price: 52255.45,
-                            btcExchangeRate: 0.235
-                        )
-                    ]
-                ),
-                reducer: dashboardReducer,
-                environment: .init(mainQueue: .main)
+        Button("Tap to open dashboard") {
+            shouldOpenDashboard.toggle()
+        }
+        .sheet(isPresented: $shouldOpenDashboard) {
+            DashboardView(
+                store: .init(
+                    initialState: .init(),
+                    reducer: dashboardReducer,
+                    environment: .init(
+                        mainQueue: .main,
+                        assetRepository: CryptoAssetRepository()
+                    )
+                )
             )
-        )
+        }
     }
 }
 

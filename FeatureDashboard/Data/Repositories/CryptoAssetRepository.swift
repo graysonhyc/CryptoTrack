@@ -8,7 +8,24 @@
 import Combine
 
 final class CryptoAssetRepository: CryptoAssetRepositoryAPI {
-    func fetchAsset() -> AnyPublisher<CryptoAsset, CryptoAssetRepositoryError> {
-        fatalError("not implemented")
+
+    // MARK: - Properties
+
+    private let client: CryptoAssetFetchingClientAPI
+
+    // MARK: - Setup
+
+    init(client: CryptoAssetFetchingClientAPI = CryptoAssetFetchingClient()) {
+        self.client = client
+    }
+
+    // MARK: - API
+
+    func fetchAsset() -> AnyPublisher<[CryptoAsset], CryptoAssetRepositoryError> {
+        client
+            .fetchAssets()
+            .map { $0.map { $0.toDomain() } }
+            .mapError { _ in .clientError }
+            .eraseToAnyPublisher()
     }
 }
