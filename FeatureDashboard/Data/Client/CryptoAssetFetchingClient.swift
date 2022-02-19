@@ -10,7 +10,8 @@ import Combine
 import Foundation
 
 enum CryptoAssetClientError: Error {
-    case networkError(AFError)
+    case invalidStatusCode(code: Int)
+    case alamofire(AFError)
     case unknown
 }
 
@@ -23,17 +24,40 @@ protocol CryptoAssetFetchingClientAPI {
 }
 
 final class CryptoAssetFetchingClient: CryptoAssetFetchingClientAPI {
+
+    // MARK: - API
+
     func fetchAssets() -> AnyPublisher<[CryptoAssetResponse], CryptoAssetClientError> {
-        let url = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false"
-        return AF.request(url, method: .get)
+        let pathComponent = "coins/markets"
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(
+                name: "vs_currency",
+                value: "usd"
+            ),
+            URLQueryItem(
+                name: "order",
+                value: "market_cap_desc"
+            )
+        ]
+        var urlComponent = URLComponents(string: APIConstants.Host.coinGekco + pathComponent)
+        urlComponent?.queryItems = queryItems
+        return AF.request(urlComponent!.url!.absoluteString, method: .get)
             .validate()
             .publishDecodable(type: [CryptoAssetResponse].self)
             .flatMap { response -> AnyPublisher<[CryptoAssetResponse], CryptoAssetClientError> in
+                if let statusCode = response.response?.statusCode {
+                    guard statusCode == 200 else {
+                        return Fail(error: .invalidStatusCode(code: statusCode))
+                            .eraseToAnyPublisher()
+                    }
+                }
                 if let error = response.error {
-                    return Fail(error: .networkError(error)).eraseToAnyPublisher()
+                    return Fail(error: .alamofire(error))
+                        .eraseToAnyPublisher()
                 }
                 guard let value = response.value else {
-                    return Fail(error: .unknown).eraseToAnyPublisher()
+                    return Fail(error: .unknown)
+                        .eraseToAnyPublisher()
                 }
                 return Just(value)
                     .setFailureType(to: CryptoAssetClientError.self)

@@ -24,8 +24,12 @@ final class CryptoAssetRepository: CryptoAssetRepositoryAPI {
     func fetchAsset() -> AnyPublisher<[CryptoAsset], CryptoAssetRepositoryError> {
         client
             .fetchAssets()
-            .map { $0.map { $0.toDomain() } }
-            .mapError { _ in .clientError }
+            .map { assets in
+                assets.map { $0.toDomain() }
+            }
+            .mapError { error in
+                .failedToFetch(error.localizedDescription)
+            }
             .eraseToAnyPublisher()
     }
 }

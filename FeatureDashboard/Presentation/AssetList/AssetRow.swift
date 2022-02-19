@@ -9,11 +9,7 @@ import SwiftUI
 
 struct AssetRow: View {
 
-    private let asset: CryptoAsset
-
-    init(asset: CryptoAsset) {
-        self.asset = asset
-    }
+    let asset: CryptoAsset
 
     var body: some View {
         HStack(alignment: .center, spacing: 15.0) {
@@ -51,7 +47,6 @@ struct AssetRow: View {
 }
 
 struct AssetRow_Previews: PreviewProvider {
-
     static var previews: some View {
         AssetRow(
             asset: CryptoAsset(

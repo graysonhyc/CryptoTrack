@@ -8,7 +8,7 @@
 import Combine
 
 enum CryptoAssetRepositoryError: Error {
-    case clientError
+    case failedToFetch(String)
 }
 
 protocol CryptoAssetRepositoryAPI {
