@@ -55,16 +55,19 @@ let dashboardReducer = Reducer<
 > { state, action, environment in
     switch action {
     case .onAppear:
-        return Effect.timer(
-            id: DashboardCancellations.RefreshTimerId(),
-            every: 5,
-            on: environment.mainQueue
+        return .merge(
+            Effect(value: .fetchCryptoAsset),
+            Effect.timer(
+                id: DashboardCancellations.RefreshTimerId(),
+                every: 5,
+                on: environment.mainQueue
+            )
+            .map { _ in
+                .fetchCryptoAsset
+            }
+            .receive(on: environment.mainQueue)
+            .eraseToEffect()
         )
-        .map { _ in
-            .fetchCryptoAsset
-        }
-        .receive(on: environment.mainQueue)
-        .eraseToEffect()
 
     case .fetchCryptoAsset:
         return environment
@@ -85,6 +88,7 @@ let dashboardReducer = Reducer<
         switch result {
         case .success(let assets):
             state.cryptoAssets = assets
+            return Effect(value: .set(\.$searchText, state.searchText))
         case .failure(let error):
             break
         }

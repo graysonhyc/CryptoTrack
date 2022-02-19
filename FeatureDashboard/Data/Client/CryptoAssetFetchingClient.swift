@@ -7,6 +7,7 @@
 
 import Alamofire
 import Combine
+import Foundation
 
 enum CryptoAssetClientError: Error {
     case networkError(AFError)

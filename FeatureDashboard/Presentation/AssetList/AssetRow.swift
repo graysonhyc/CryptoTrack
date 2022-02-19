@@ -17,24 +17,33 @@ struct AssetRow: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 15.0) {
-            AsyncImage(url: asset.imageURL)
-                .frame(width: 48, height: 48)
+            AsyncImage(
+                url: asset.imageURL
+            ) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .frame(width: 48, height: 48)
             VStack(alignment: .leading, spacing: 2.0) {
                 Text(asset.name)
                     .font(.system(size: 13.0))
                     .fontWeight(.semibold)
-                Text(asset.symbol)
+                Text(asset.symbol.uppercased())
                     .font(.system(size: 12.0))
                     .fontWeight(.regular)
+                    .opacity(0.8)
             }
             Spacer()
             VStack(alignment: .trailing, spacing: 2.0) {
                 Text("$\(String(format: "%.2f", asset.price))")
                     .font(.system(size: 13.0))
                     .fontWeight(.regular)
+                    .opacity(0.8)
                 Text("\(asset.btcExchangeRate) BTC")
                     .font(.system(size: 13.0))
                     .fontWeight(.regular)
+                    .opacity(0.6)
             }
         }
         .padding(10)

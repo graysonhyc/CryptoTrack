@@ -57,13 +57,13 @@ struct CryptoAssetResponse: Decodable {
     var currentPrice: Float?
     var atl: Float?
     var high24h: Float?
-    var maxSupply: Int?
+    var maxSupply: Float?
     var atlDate: String?
     var athChangePercentage: Float?
     var image: String?
     var name: String?
     var roi: ROIResponse?
-    var totalSupply: Int?
+    var totalSupply: Float?
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -86,13 +86,13 @@ struct CryptoAssetResponse: Decodable {
         currentPrice = try container.decodeIfPresent(Float.self, forKey: .currentPrice)
         atl = try container.decodeIfPresent(Float.self, forKey: .atl)
         high24h = try container.decodeIfPresent(Float.self, forKey: .high24h)
-        maxSupply = try container.decodeIfPresent(Int.self, forKey: .maxSupply)
+        maxSupply = try container.decodeIfPresent(Float.self, forKey: .maxSupply)
         atlDate = try container.decodeIfPresent(String.self, forKey: .atlDate)
         athChangePercentage = try container.decodeIfPresent(Float.self, forKey: .athChangePercentage)
         image = try container.decodeIfPresent(String.self, forKey: .image)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         roi = try container.decodeIfPresent(ROIResponse.self, forKey: .roi)
-        totalSupply = try container.decodeIfPresent(Int.self, forKey: .totalSupply)
+        totalSupply = try container.decodeIfPresent(Float.self, forKey: .totalSupply)
     }
 
     func toDomain() -> CryptoAsset {
