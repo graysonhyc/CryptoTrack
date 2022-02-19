@@ -28,7 +28,7 @@ final class CryptoAssetRepository: CryptoAssetRepositoryAPI {
         )
         .map { (assets, priceResponse) in
             assets.map { asset in
-                if asset.name == "bitcoin" {
+                if asset.name != "bitcoin" {
                     let btcExchangeRate = Double(asset.currentPrice / priceResponse.price)
                     return asset.toDomain(btcExchangeRate: btcExchangeRate)
                 }
