@@ -1,6 +1,6 @@
 //
 //  AssetRow.swift
-//  BraveWalletHack (iOS)
+//  CryptoTrack (iOS)
 //
 //  Created by Grayson Ho on 16/02/2022.
 //

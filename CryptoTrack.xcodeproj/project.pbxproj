@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */; };
-		5663D5ED27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */; };
 		5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* RootView.swift */; };
-		5663D5EF27BDA8DE00F8F372 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* RootView.swift */; };
 		5663D5F027BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
-		5663D5F127BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
 		5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5663D60127BDA98C00F8F372 /* ComposableArchitecture */; };
 		5663D60727BDAA9A00F8F372 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D60627BDAA9A00F8F372 /* DashboardView.swift */; };
 		5663D60A27BDAAA700F8F372 /* DashboardReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D60927BDAAA700F8F372 /* DashboardReducer.swift */; };
@@ -26,26 +23,11 @@
 		56A874FF27C1249900C0F263 /* CryptoAssetResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */; };
 		56A8750327C1599E00C0F263 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750227C1599E00C0F263 /* APIConstants.swift */; };
 		56A8750527C163A000C0F263 /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750427C163A000C0F263 /* PriceResponse.swift */; };
-		56A8750727C170F200C0F263 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A8750627C170F200C0F263 /* Icons.swift */; };
 		56A9B3E727C179030011EC1F /* DashboardReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9B3D327C1783C0011EC1F /* DashboardReducerTests.swift */; };
 		56A9B3E827C179080011EC1F /* MockFetchingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A9B3D627C178510011EC1F /* MockFetchingClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5663D5D927BDA8DE00F8F372 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5663D5BF27BDA8DB00F8F372 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5663D5CA27BDA8DE00F8F372;
-			remoteInfo = "BraveWalletHack (iOS)";
-		};
-		5663D5E527BDA8DE00F8F372 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5663D5BF27BDA8DB00F8F372 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5663D5D027BDA8DE00F8F372;
-			remoteInfo = "BraveWalletHack (macOS)";
-		};
 		56A9B3E227C178E60011EC1F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5663D5BF27BDA8DB00F8F372 /* Project object */;
@@ -59,11 +41,7 @@
 		5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraveWalletHackApp.swift; sourceTree = "<group>"; };
 		5663D5C527BDA8DC00F8F372 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5663D5C627BDA8DE00F8F372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5663D5CB27BDA8DE00F8F372 /* BraveWalletHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BraveWalletHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5663D5D127BDA8DE00F8F372 /* BraveWalletHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BraveWalletHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5663D5D327BDA8DE00F8F372 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		5663D5D827BDA8DE00F8F372 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5663D5E427BDA8DE00F8F372 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5663D5CB27BDA8DE00F8F372 /* CryptoTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5663D60627BDAA9A00F8F372 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		5663D60927BDAAA700F8F372 /* DashboardReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardReducer.swift; sourceTree = "<group>"; };
 		5663D60B27BDAB8100F8F372 /* LocalizationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationConstants.swift; sourceTree = "<group>"; };
@@ -75,10 +53,9 @@
 		56A874FE27C1249900C0F263 /* CryptoAssetResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssetResponse.swift; sourceTree = "<group>"; };
 		56A8750227C1599E00C0F263 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 		56A8750427C163A000C0F263 /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
-		56A8750627C170F200C0F263 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		56A9B3D327C1783C0011EC1F /* DashboardReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardReducerTests.swift; sourceTree = "<group>"; };
 		56A9B3D627C178510011EC1F /* MockFetchingClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFetchingClient.swift; sourceTree = "<group>"; };
-		56A9B3DE27C178E60011EC1F /* BraveWalletHackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BraveWalletHackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		56A9B3DE27C178E60011EC1F /* CryptoTrackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTrackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,27 +65,6 @@
 			files = (
 				5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */,
 				5663D61427BDBAB700F8F372 /* Alamofire in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5CE27BDA8DE00F8F372 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5D527BDA8DE00F8F372 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5E127BDA8DE00F8F372 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				5663D5C327BDA8DC00F8F372 /* FeatureDashboard */,
-				5663D5D227BDA8DE00F8F372 /* macOS */,
 				56A9B3DF27C178E60011EC1F /* BraveWalletHackTests */,
 				5663D5CC27BDA8DE00F8F372 /* Products */,
 			);
@@ -148,21 +103,10 @@
 		5663D5CC27BDA8DE00F8F372 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5663D5CB27BDA8DE00F8F372 /* BraveWalletHack.app */,
-				5663D5D127BDA8DE00F8F372 /* BraveWalletHack.app */,
-				5663D5D827BDA8DE00F8F372 /* Tests iOS.xctest */,
-				5663D5E427BDA8DE00F8F372 /* Tests macOS.xctest */,
-				56A9B3DE27C178E60011EC1F /* BraveWalletHackTests.xctest */,
+				5663D5CB27BDA8DE00F8F372 /* CryptoTrack.app */,
+				56A9B3DE27C178E60011EC1F /* CryptoTrackTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5663D5D227BDA8DE00F8F372 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				5663D5D327BDA8DE00F8F372 /* macOS.entitlements */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 		5663D60327BDA9B200F8F372 /* Presentation */ = {
@@ -200,7 +144,6 @@
 			children = (
 				5663D60627BDAA9A00F8F372 /* DashboardView.swift */,
 				5663D60927BDAAA700F8F372 /* DashboardReducer.swift */,
-				56A8750627C170F200C0F263 /* Icons.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -282,9 +225,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5663D5CA27BDA8DE00F8F372 /* BraveWalletHack (iOS) */ = {
+		5663D5CA27BDA8DE00F8F372 /* CryptoTrack (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5663D5F427BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "BraveWalletHack (iOS)" */;
+			buildConfigurationList = 5663D5F427BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "CryptoTrack (iOS)" */;
 			buildPhases = (
 				5663D5C727BDA8DE00F8F372 /* Sources */,
 				5663D5C827BDA8DE00F8F372 /* Frameworks */,
@@ -294,71 +237,18 @@
 			);
 			dependencies = (
 			);
-			name = "BraveWalletHack (iOS)";
+			name = "CryptoTrack (iOS)";
 			packageProductDependencies = (
 				5663D60127BDA98C00F8F372 /* ComposableArchitecture */,
 				5663D61327BDBAB700F8F372 /* Alamofire */,
 			);
 			productName = "BraveWalletHack (iOS)";
-			productReference = 5663D5CB27BDA8DE00F8F372 /* BraveWalletHack.app */;
+			productReference = 5663D5CB27BDA8DE00F8F372 /* CryptoTrack.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5663D5D027BDA8DE00F8F372 /* BraveWalletHack (macOS) */ = {
+		56A9B3DD27C178E60011EC1F /* CryptoTrackTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5663D5F727BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "BraveWalletHack (macOS)" */;
-			buildPhases = (
-				5663D5CD27BDA8DE00F8F372 /* Sources */,
-				5663D5CE27BDA8DE00F8F372 /* Frameworks */,
-				5663D5CF27BDA8DE00F8F372 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BraveWalletHack (macOS)";
-			productName = "BraveWalletHack (macOS)";
-			productReference = 5663D5D127BDA8DE00F8F372 /* BraveWalletHack.app */;
-			productType = "com.apple.product-type.application";
-		};
-		5663D5D727BDA8DE00F8F372 /* Tests iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5663D5FA27BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
-			buildPhases = (
-				5663D5D427BDA8DE00F8F372 /* Sources */,
-				5663D5D527BDA8DE00F8F372 /* Frameworks */,
-				5663D5D627BDA8DE00F8F372 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5663D5DA27BDA8DE00F8F372 /* PBXTargetDependency */,
-			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = 5663D5D827BDA8DE00F8F372 /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		5663D5E327BDA8DE00F8F372 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5663D5FD27BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				5663D5E027BDA8DE00F8F372 /* Sources */,
-				5663D5E127BDA8DE00F8F372 /* Frameworks */,
-				5663D5E227BDA8DE00F8F372 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5663D5E627BDA8DE00F8F372 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = 5663D5E427BDA8DE00F8F372 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		56A9B3DD27C178E60011EC1F /* BraveWalletHackTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 56A9B3E427C178E60011EC1F /* Build configuration list for PBXNativeTarget "BraveWalletHackTests" */;
+			buildConfigurationList = 56A9B3E427C178E60011EC1F /* Build configuration list for PBXNativeTarget "CryptoTrackTests" */;
 			buildPhases = (
 				56A9B3DA27C178E60011EC1F /* Sources */,
 				56A9B3DB27C178E60011EC1F /* Frameworks */,
@@ -369,9 +259,9 @@
 			dependencies = (
 				56A9B3E327C178E60011EC1F /* PBXTargetDependency */,
 			);
-			name = BraveWalletHackTests;
+			name = CryptoTrackTests;
 			productName = BraveWalletHackTests;
-			productReference = 56A9B3DE27C178E60011EC1F /* BraveWalletHackTests.xctest */;
+			productReference = 56A9B3DE27C178E60011EC1F /* CryptoTrackTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -387,24 +277,13 @@
 					5663D5CA27BDA8DE00F8F372 = {
 						CreatedOnToolsVersion = 13.3;
 					};
-					5663D5D027BDA8DE00F8F372 = {
-						CreatedOnToolsVersion = 13.3;
-					};
-					5663D5D727BDA8DE00F8F372 = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 5663D5CA27BDA8DE00F8F372;
-					};
-					5663D5E327BDA8DE00F8F372 = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = 5663D5D027BDA8DE00F8F372;
-					};
 					56A9B3DD27C178E60011EC1F = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = 5663D5CA27BDA8DE00F8F372;
 					};
 				};
 			};
-			buildConfigurationList = 5663D5C227BDA8DB00F8F372 /* Build configuration list for PBXProject "BraveWalletHack" */;
+			buildConfigurationList = 5663D5C227BDA8DB00F8F372 /* Build configuration list for PBXProject "CryptoTrack" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -421,11 +300,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5663D5CA27BDA8DE00F8F372 /* BraveWalletHack (iOS) */,
-				5663D5D027BDA8DE00F8F372 /* BraveWalletHack (macOS) */,
-				5663D5D727BDA8DE00F8F372 /* Tests iOS */,
-				5663D5E327BDA8DE00F8F372 /* Tests macOS */,
-				56A9B3DD27C178E60011EC1F /* BraveWalletHackTests */,
+				5663D5CA27BDA8DE00F8F372 /* CryptoTrack (iOS) */,
+				56A9B3DD27C178E60011EC1F /* CryptoTrackTests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,28 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5663D5F027BDA8DE00F8F372 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5CF27BDA8DE00F8F372 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5663D5F127BDA8DE00F8F372 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5D627BDA8DE00F8F372 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5E227BDA8DE00F8F372 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,36 +336,12 @@
 				5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */,
 				5663D60727BDAA9A00F8F372 /* DashboardView.swift in Sources */,
 				5663D61727BDBDE500F8F372 /* CryptoAssetFetchingClient.swift in Sources */,
-				56A8750727C170F200C0F263 /* Icons.swift in Sources */,
 				5663D61127BDB75E00F8F372 /* AssetRow.swift in Sources */,
 				5663D60C27BDAB8100F8F372 /* LocalizationConstants.swift in Sources */,
 				5663D60E27BDAEB000F8F372 /* CryptoAsset.swift in Sources */,
 				5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */,
 				5663D61B27BDBE3D00F8F372 /* CryptoAssetRepository.swift in Sources */,
 				5663D60A27BDAAA700F8F372 /* DashboardReducer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5CD27BDA8DE00F8F372 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5663D5EF27BDA8DE00F8F372 /* RootView.swift in Sources */,
-				5663D5ED27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5D427BDA8DE00F8F372 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5663D5E027BDA8DE00F8F372 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,19 +357,9 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5663D5DA27BDA8DE00F8F372 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5663D5CA27BDA8DE00F8F372 /* BraveWalletHack (iOS) */;
-			targetProxy = 5663D5D927BDA8DE00F8F372 /* PBXContainerItemProxy */;
-		};
-		5663D5E627BDA8DE00F8F372 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5663D5D027BDA8DE00F8F372 /* BraveWalletHack (macOS) */;
-			targetProxy = 5663D5E527BDA8DE00F8F372 /* PBXContainerItemProxy */;
-		};
 		56A9B3E327C178E60011EC1F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5663D5CA27BDA8DE00F8F372 /* BraveWalletHack (iOS) */;
+			target = 5663D5CA27BDA8DE00F8F372 /* CryptoTrack (iOS) */;
 			targetProxy = 56A9B3E227C178E60011EC1F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -659,11 +479,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -676,8 +499,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.graysonho.BraveWalletHack;
-				PRODUCT_NAME = BraveWalletHack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.embright.CryptoTrack;
+				PRODUCT_NAME = CryptoTrack;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -690,11 +514,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CryptoTrack;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -707,148 +534,14 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.graysonho.BraveWalletHack;
-				PRODUCT_NAME = BraveWalletHack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.embright.CryptoTrack;
+				PRODUCT_NAME = CryptoTrack;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5663D5F827BDA8DE00F8F372 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.graysonho.BraveWalletHack;
-				PRODUCT_NAME = BraveWalletHack;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		5663D5F927BDA8DE00F8F372 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.graysonho.BraveWalletHack;
-				PRODUCT_NAME = BraveWalletHack;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		5663D5FB27BDA8DE00F8F372 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.graysonho.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "BraveWalletHack (iOS)";
-			};
-			name = Debug;
-		};
-		5663D5FC27BDA8DE00F8F372 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.graysonho.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "BraveWalletHack (iOS)";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5663D5FE27BDA8DE00F8F372 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.graysonho.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "BraveWalletHack (macOS)";
-			};
-			name = Debug;
-		};
-		5663D5FF27BDA8DE00F8F372 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.graysonho.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "BraveWalletHack (macOS)";
 			};
 			name = Release;
 		};
@@ -856,19 +549,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.graysonho.BraveWalletHackTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.embright.CryptoTrackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BraveWalletHack.app/BraveWalletHack";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoTrack.app/CryptoTrack";
 			};
 			name = Debug;
 		};
@@ -876,19 +570,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HMQ3S2C39A;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.graysonho.BraveWalletHackTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.embright.CryptoTrackTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BraveWalletHack.app/BraveWalletHack";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoTrack.app/CryptoTrack";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -896,7 +591,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5663D5C227BDA8DB00F8F372 /* Build configuration list for PBXProject "BraveWalletHack" */ = {
+		5663D5C227BDA8DB00F8F372 /* Build configuration list for PBXProject "CryptoTrack" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5663D5F227BDA8DE00F8F372 /* Debug */,
@@ -905,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5663D5F427BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "BraveWalletHack (iOS)" */ = {
+		5663D5F427BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "CryptoTrack (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5663D5F527BDA8DE00F8F372 /* Debug */,
@@ -914,34 +609,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5663D5F727BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "BraveWalletHack (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5663D5F827BDA8DE00F8F372 /* Debug */,
-				5663D5F927BDA8DE00F8F372 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5663D5FA27BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5663D5FB27BDA8DE00F8F372 /* Debug */,
-				5663D5FC27BDA8DE00F8F372 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5663D5FD27BDA8DE00F8F372 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5663D5FE27BDA8DE00F8F372 /* Debug */,
-				5663D5FF27BDA8DE00F8F372 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		56A9B3E427C178E60011EC1F /* Build configuration list for PBXNativeTarget "BraveWalletHackTests" */ = {
+		56A9B3E427C178E60011EC1F /* Build configuration list for PBXNativeTarget "CryptoTrackTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				56A9B3E527C178E60011EC1F /* Debug */,

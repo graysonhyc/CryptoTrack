@@ -1,6 +1,6 @@
 //
 //  LocalizationConstants.swift
-//  BraveWalletHack (iOS)
+//  CryptoTrack (iOS)
 //
 //  Created by Grayson Ho on 16/02/2022.
 //
@@ -8,6 +8,12 @@
 import Foundation
 
 enum LocalizationConstants {
+    enum RootView {
+        static let enterApp = NSLocalizedString(
+            "Enter Crypto Tracker",
+            comment: "Enter app string"
+        )
+    }
     enum DashboardView {
         static let navigationTitle = NSLocalizedString(
             "Crypto",

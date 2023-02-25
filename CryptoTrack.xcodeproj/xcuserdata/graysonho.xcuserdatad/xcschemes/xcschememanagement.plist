@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BraveWalletHack (iOS).xcscheme_^#shared#^_</key>
+		<key>CryptoTrack.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-		<key>BraveWalletHack (macOS).xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>18</integer>
 		</dict>
 		<key>CustomDump (Playground) 1.xcscheme</key>
 		<dict>
@@ -34,6 +29,34 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>20</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5663D5CA27BDA8DE00F8F372</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5663D5D027BDA8DE00F8F372</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5663D5D727BDA8DE00F8F372</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5663D5E327BDA8DE00F8F372</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>56A9B3DD27C178E60011EC1F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

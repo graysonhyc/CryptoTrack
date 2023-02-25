@@ -5,7 +5,7 @@
 //  Created by Grayson Ho on 19/02/2022.
 //
 
-@testable import BraveWalletHack
+@testable import CryptoTrack
 import ComposableArchitecture
 import XCTest
 

@@ -1,6 +1,6 @@
 //
 //  DashboardView.swift
-//  BraveWalletHack (iOS)
+//  CryptoTrack (iOS)
 //
 //  Created by Grayson Ho on 16/02/2022.
 //
@@ -37,13 +37,6 @@ struct DashboardView: View {
                         .refreshable { viewStore.send(.fetchCryptoAsset) }
                         .listStyle(.insetGrouped)
                         .listRowSeparator(.visible)
-                    }
-                    Button(action: {
-                        viewStore.send(.fabButtonTapped)
-                    }) {
-                        Image.fab
-                            .frame(width: 48, height: 48)
-                            .padding(.bottom, 12)
                     }
                 }
                 .navigationTitle(LocalizedString.navigationTitle)

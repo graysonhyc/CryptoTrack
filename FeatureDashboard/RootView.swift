@@ -12,12 +12,22 @@ struct RootView: View {
     @State private var shouldOpenDashboard: Bool = false
 
     var body: some View {
-        Button(action: {
-            shouldOpenDashboard.toggle()
-        }) {
-            Image("brave_logo")
+        VStack(spacing: 100) {
+            Image("logo")
                 .resizable()
                 .frame(width: 128, height: 128)
+            Button(
+                action: { shouldOpenDashboard.toggle() },
+                label: {
+                    Text(LocalizationConstants.RootView.enterApp)
+                        .fontWeight(.semibold)
+                        .font(.title3)
+                        .frame(maxWidth: .infinity)
+                }
+            )
+            .padding(.horizontal, 24)
+            .buttonBorderShape(.roundedRectangle)
+            .buttonStyle(.borderedProminent)
         }
         .sheet(isPresented: $shouldOpenDashboard) {
             DashboardView(
