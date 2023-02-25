@@ -1,9 +1,6 @@
 //
 //  APIConstants.swift
-//  CryptoTrack (iOS)
-//
-//  Created by Grayson Ho on 19/02/2022.
-//
+//  CryptoTrack
 
 enum APIConstants {
     enum Host {

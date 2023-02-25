@@ -1,9 +1,6 @@
 //
 //  MockFetchingClient.swift
-//  Tests iOS
-//
-//  Created by Grayson Ho on 19/02/2022.
-//
+//  Tests
 
 @testable import CryptoTrack
 import Combine

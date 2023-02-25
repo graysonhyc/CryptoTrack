@@ -1,9 +1,6 @@
 //
 //  CryptoAssetRepository.swift
-//  CryptoTrack (iOS)
-//
-//  Created by Grayson Ho on 16/02/2022.
-//
+//  CryptoTrack
 
 import Combine
 

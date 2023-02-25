@@ -1,9 +1,6 @@
 //
 //  PriceResponse.swift
-//  CryptoTrack (iOS)
-//
-//  Created by Grayson Ho on 19/02/2022.
-//
+//  CryptoTrack
 
 import Foundation
 
