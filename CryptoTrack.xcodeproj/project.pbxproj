@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */; };
+		5663D5EC27BDA8DE00F8F372 /* CryptoTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C427BDA8DC00F8F372 /* CryptoTrackApp.swift */; };
 		5663D5EE27BDA8DE00F8F372 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5663D5C527BDA8DC00F8F372 /* RootView.swift */; };
 		5663D5F027BDA8DE00F8F372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5663D5C627BDA8DE00F8F372 /* Assets.xcassets */; };
 		5663D60227BDA98C00F8F372 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 5663D60127BDA98C00F8F372 /* ComposableArchitecture */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraveWalletHackApp.swift; sourceTree = "<group>"; };
+		5663D5C427BDA8DC00F8F372 /* CryptoTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTrackApp.swift; sourceTree = "<group>"; };
 		5663D5C527BDA8DC00F8F372 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		5663D5C627BDA8DE00F8F372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5663D5CB27BDA8DE00F8F372 /* CryptoTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				5663D5C327BDA8DC00F8F372 /* FeatureDashboard */,
-				56A9B3DF27C178E60011EC1F /* BraveWalletHackTests */,
+				56A9B3DF27C178E60011EC1F /* CryptoTrackTests */,
 				5663D5CC27BDA8DE00F8F372 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 		5663D5C327BDA8DC00F8F372 /* FeatureDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				5663D5C427BDA8DC00F8F372 /* BraveWalletHackApp.swift */,
+				5663D5C427BDA8DC00F8F372 /* CryptoTrackApp.swift */,
 				5663D5C527BDA8DC00F8F372 /* RootView.swift */,
 				5663D60527BDA9BE00F8F372 /* Data */,
 				5663D60427BDA9B800F8F372 /* Domain */,
@@ -214,12 +214,12 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		56A9B3DF27C178E60011EC1F /* BraveWalletHackTests */ = {
+		56A9B3DF27C178E60011EC1F /* CryptoTrackTests */ = {
 			isa = PBXGroup;
 			children = (
 				56A9B3D227C1782A0011EC1F /* FeatureDashboardTests */,
 			);
-			path = BraveWalletHackTests;
+			path = CryptoTrackTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,7 +339,7 @@
 				5663D61127BDB75E00F8F372 /* AssetRow.swift in Sources */,
 				5663D60C27BDAB8100F8F372 /* LocalizationConstants.swift in Sources */,
 				5663D60E27BDAEB000F8F372 /* CryptoAsset.swift in Sources */,
-				5663D5EC27BDA8DE00F8F372 /* BraveWalletHackApp.swift in Sources */,
+				5663D5EC27BDA8DE00F8F372 /* CryptoTrackApp.swift in Sources */,
 				5663D61B27BDBE3D00F8F372 /* CryptoAssetRepository.swift in Sources */,
 				5663D60A27BDAAA700F8F372 /* DashboardReducer.swift in Sources */,
 			);
