@@ -10,9 +10,7 @@ struct RootView: View {
 
     var body: some View {
         VStack(spacing: 100) {
-            Image("logo")
-                .resizable()
-                .frame(width: 128, height: 128)
+            // todo: add logo
             Button(
                 action: { shouldOpenDashboard.toggle() },
                 label: {
@@ -22,22 +20,9 @@ struct RootView: View {
                         .frame(maxWidth: .infinity)
                 }
             )
-            .padding(.horizontal, 24)
-            .buttonBorderShape(.roundedRectangle)
-            .buttonStyle(.borderedProminent)
+            // todo: add view modifiers
         }
-        .sheet(isPresented: $shouldOpenDashboard) {
-            DashboardView(
-                store: .init(
-                    initialState: .init(),
-                    reducer: dashboardReducer,
-                    environment: .init(
-                        mainQueue: .main,
-                        assetRepository: CryptoAssetRepository()
-                    )
-                )
-            )
-        }
+        // todo: add .sheet to show dashboard view
     }
 }
 

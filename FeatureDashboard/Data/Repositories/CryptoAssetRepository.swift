@@ -19,25 +19,10 @@ final class CryptoAssetRepository: CryptoAssetRepositoryAPI {
     // MARK: - API
 
     func fetchAsset() -> AnyPublisher<[CryptoAsset], CryptoAssetRepositoryError> {
-        Publishers.Zip(
-            client.fetchAssets(),
-            client.fetchAssetPrice(name: "bitcoin", currency: "usd")
-        )
-        .map { [printAssets] (assets, priceResponse) in
-            let assets = assets.map { asset -> CryptoAsset in
-                if asset.symbol != "btc" {
-                    let btcExchangeRate = Double(asset.currentPrice / priceResponse.price)
-                    return asset.toDomain(btcExchangeRate: btcExchangeRate)
-                }
-                return asset.toDomain(btcExchangeRate: nil)
-            }
-            printAssets(assets)
-            return assets
-        }
-        .mapError { error in
-            .failedToFetch(error.localizedDescription)
-        }
-        .eraseToAnyPublisher()
+        // todo: fetch assets from the network client
+        Just([])
+            .setFailureType(to: CryptoAssetRepositoryError.self)
+            .eraseToAnyPublisher()
     }
 }
 

@@ -20,20 +20,7 @@ struct DashboardView: View {
             NavigationView {
                 ZStack(alignment: .bottom) {
                     VStack {
-                        List {
-                            Section(LocalizedString.AssetList.title) {
-                                ForEach(viewStore.filteredCryptoAssets, id: \.symbol) {
-                                    AssetRow(asset: $0)
-                                }
-                            }
-                        }
-                        .searchable(
-                            text: viewStore.binding(\.$searchText),
-                            placement: .navigationBarDrawer(displayMode: .always)
-                        )
-                        .refreshable { viewStore.send(.fetchCryptoAsset) }
-                        .listStyle(.insetGrouped)
-                        .listRowSeparator(.visible)
+                        // todo: add a list of crypto assets
                     }
                 }
                 .navigationTitle(LocalizedString.navigationTitle)

@@ -55,36 +55,16 @@ let dashboardReducer = Reducer<
     switch action {
     case .onAppear:
         return .merge(
-            Effect(value: .fetchCryptoAsset),
-            Effect.timer(
-                id: DashboardCancellations.RefreshTimerId(),
-                every: 5,
-                on: environment.mainQueue
-            )
-            .map { _ in
-                .fetchCryptoAsset
-            }
-            .receive(on: environment.mainQueue)
-            .eraseToEffect()
+            Effect(value: .fetchCryptoAsset)
+            // todo: implement periodic fetching
         )
 
     case .onDisappear:
         return .cancel(id: DashboardCancellations.RefreshTimerId())
 
     case .fetchCryptoAsset:
-        return environment
-            .assetRepository
-            .fetchAsset()
-            .receive(on: environment.mainQueue)
-            .catchToEffect()
-            .map { result in
-                switch result {
-                case .success(let assets):
-                    return .didFetchCryptoAsset(.success(assets))
-                case .failure(let error):
-                    return .didFetchCryptoAsset(.failure(error))
-                }
-            }
+        // todo: implement fetch crypto asset
+        return .none
 
     case .didFetchCryptoAsset(let result):
         switch result {
@@ -101,11 +81,7 @@ let dashboardReducer = Reducer<
         return .none
 
     case .binding(\.$searchText):
-        if state.searchText.isEmpty {
-            state.filteredCryptoAssets = state.cryptoAssets
-        } else {
-            state.filteredCryptoAssets = state.cryptoAssets.filter { $0.name.contains(state.searchText) }
-        }
+        // todo: implement search by text
         return .none
 
     case .binding:

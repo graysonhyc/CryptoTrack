@@ -10,14 +10,7 @@ struct AssetRow: View {
 
     var body: some View {
         HStack(alignment: .center, spacing: 15.0) {
-            AsyncImage(
-                url: asset.imageURL
-            ) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 48, height: 48)
+            // todo: add image for crypto asset
             VStack(alignment: .leading, spacing: 2.0) {
                 Text(asset.name)
                     .font(.system(size: 13.0))
